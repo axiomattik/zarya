@@ -141,7 +141,7 @@ function clean() {
 
 // copies files (not js/css) into the 'bld' directory
 function copyfiles() {
-  let exts = ['php', 'txt', 'png'];
+  let exts = ['php', 'txt', 'png', 'svg'];
   return src(exts.map((ext) => `src/**/*.${ext}`))
     .pipe(dest(`${BLDROOT}/.`))
 }
