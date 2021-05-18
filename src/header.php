@@ -18,8 +18,33 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
 
-	<header id="masthead" class="site-header full-width">
-		<div id="masthead-top" class="page-width">
+	<div id="masthead-container" class="full-width">
+
+	<header id="masthead" class="site-header page-width">
+			<nav id="hamburger-nav" class="main-navigation page-width">
+				<button 
+					id="hamburger-button"
+					class="hamburger hamburger--collapse hamburger-button" 
+					aria-label="Navigation Menu"
+					aria-controls="primary-menu" 
+					aria-expanded="false">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+					<?php esc_html_e( 'Menu', '_s' ); ?>
+				</button>
+
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'hamburger-menu',
+						'menu_class' => 'hamburger-menu-no-js',
+						'menu_id' => 'hamburger-menu'
+						'container' => false,
+					)
+				);
+				?>
+			</nav><!-- #site-navigation -->
 
 			<div class="site-branding">
 				<?php
@@ -45,20 +70,7 @@
 				<a href="/my-account/"><img src="<?php echo $uri; ?>/assets/account.svg" alt="account icon"></a>
 				<a href="/cart/"><img src="<?php echo $uri; ?>/assets/bag.svg" alt="shopping bag icon"></a>
 			</div>
-		</div> <!-- masthead-top -->
-		<div id="masthead-bottom" class="full-width"> 
 
-			<nav id="site-navigation" class="main-navigation page-width">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', '_s' ); ?></button>
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'site-navigation-menu',
-					)
-				);
-				?>
-			</nav><!-- #site-navigation -->
-
-		</div> <!-- masthead-bottom -->
-	</header><!-- #masthead -->
+		</header><!-- #masthead -->
+	</div><!-- #masthead-container -->
 	<div class="site-body">
