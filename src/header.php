@@ -31,7 +31,6 @@
 					<span class="hamburger-box">
 						<span class="hamburger-inner"></span>
 					</span>
-					<?php esc_html_e( 'Menu', '_s' ); ?>
 				</button>
 
 				<?php
