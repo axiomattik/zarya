@@ -39,7 +39,7 @@
 					array(
 						'theme_location' => 'hamburger-menu',
 						'menu_class' => 'hamburger-menu-no-js',
-						'menu_id' => 'hamburger-menu'
+						'menu_id' => 'hamburger-menu',
 						'container' => false,
 					)
 				);
