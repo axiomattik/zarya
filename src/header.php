@@ -20,8 +20,8 @@
 
 	<div id="masthead-container" class="full-width">
 
-	<header id="masthead" class="site-header page-width">
-			<nav id="hamburger-nav" class="main-navigation page-width">
+		<header id="masthead" class="site-header page-width">
+			<nav id="hamburger-nav" class="main-navigation">
 				<button 
 					id="hamburger-button"
 					class="hamburger hamburger--collapse hamburger-button" 
