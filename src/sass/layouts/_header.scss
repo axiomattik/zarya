@@ -1,9 +1,6 @@
 #masthead {
 	display: flex;
 	flex-direction: column;
-	width: 100%;
-	max-width: 60em;
-	margin: 0 auto;
 }
 
 #masthead-top {
@@ -14,21 +11,33 @@
 
 .site-branding {
   display: grid;
-	height: 4rem;
 	align-items: center;
-	column-gap: 1rem;
+	column-gap: 0.5rem;
+	height: 4rem;
   grid-template-areas:
     "logo title"
     "logo description";
 
-	p {
+	h1, p {
 		margin: 0;
 		padding: 0;
+		font-size: 1rem;
+		font-weight: normal;
+	}
+	
+	a {
+		text-decoration: none;
+		color: black;
+	}
+
+	a:hover {
+		color: black;
 
 	}
 
   .custom-logo-link {
     grid-area: logo;
+		align-self: end;
 		img {
 			width: 3rem;
 			height: 3rem;
@@ -38,14 +47,14 @@
   .site-title {
     grid-area: title;
 		align-self: end;
-
-  }
+	}
 
   .site-description {
     grid-area: description;
 		align-self: start;
     font-style: italic;
     opacity: 0.5;
+		margin-top: -0.3rem;
   }
 
 }
@@ -62,6 +71,14 @@
 
 	}
 
+}
+
+#masthead-bottom {
+	//border-top: solid $color__border 2px;
+	border-top: solid black 1px;
+	//border-bottom: solid $color__border 2px;
+	border-bottom: solid black 2px;
+	background-color: #eee;
 }
 
 

@@ -47,12 +47,17 @@ if ( ! function_exists( '_s_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
-		// This theme uses wp_nav_menu() in one location.
+		add_theme_support( 'menus' );
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', '_s' ),
+				'menu-1' => __( 'Primary', '_s' ),
+				'footer-left' => __('Support', '_s' ),
+				'footer-middle' => __('About', '_s' ),
+				'footer-right' => __('Shop', '_s' ),
 			)
 		);
+
+
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
@@ -184,3 +189,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+/* Change 'add to cart' text */
+function _s_add_to_cart_text() {
+	return __( 'Add', '_s' );
+}
+//add_filter( 'woocommerce_product_single_add_to_cart_text', '_s_add_to_cart_text' );
+add_filter( 'woocommerce_product_add_to_cart_text', '_s_add_to_cart_text' );
+

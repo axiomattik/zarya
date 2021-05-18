@@ -1,15 +1,70 @@
 .single-product {
 
+	.onsale {
+		background-color: teal;
+		background-color: white;
+		padding: 0.3rem 0;
+		position: absolute;
+		width: 6.2rem;
+		top: 1.4rem;
+		left: -1.7rem;
+		transform: rotate(-45deg);
+		text-align: center;
+		font-weight: bold;
+		clip-path: polygon(32% 0%, 0% 100%, 100% 100%, 68% 0%);
+		z-index: 100;
+
+
+	}
+
+	div.entry-summary {
+		display: flex;
+		flex-direction: column;
+		gap: 0.2rem;
+		border: solid #ddd 1px;
+		padding: 1rem;
+		margin: 1rem;
+		box-shadow: 4px 4px 4px 0 rgba(0,0,0,.06);
+
+
+		h1, p {
+			margin: 0;
+			padding: 0;
+		}
+
+		form.cart {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+
+			button {
+				flex-basis: 100%;
+
+			}
+		}
+
+		.product_meta {
+			margin-top: auto;
+			display: flex;
+			flex-direction: column;
+			opacity: 0.7;
+		}
+
+	}
+	
+
 	div.product {
 		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 2rem;
 
 		.woocommerce-product-gallery {
 			position: relative;
-			float: left;
 
 			.woocommerce-product-gallery__trigger {
 				position: absolute;
-				top: 2em;
+				top: 1.75em;
 				right: 1em;
 				display: block;
 				z-index: 99;
@@ -47,20 +102,20 @@
 
 			@for $i from 2 through 5 {
 
-				&.woocommerce-product-gallery--columns-#{$i} {
+        &.woocommerce-product-gallery--columns-#{$i} {
 
-					.flex-control-thumbs {
+          .flex-control-thumbs {
 
-						li {
+            li {
 
-							@include column-width($i);
+              @include column-width($i);
 
-							&:nth-child(#{$i}n) {
-								margin-right: 0;
-							}
+              &:nth-child(#{$i}n) {
+                margin-right: 0;
+              }
 
-							&:nth-child(#{$i}n+1) {
-								clear: both;
+              &:nth-child(#{$i}n+1) {
+                clear: both;
 							}
 						}
 					}
@@ -69,6 +124,9 @@
 		}
 	}
 }
+
+
+
 
 .stock {
 

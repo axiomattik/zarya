@@ -1,6 +1,37 @@
+html, body {
+	max-width: 100%;
+	overflow-x: hidden;
+
+}
+
 #page {
 	display: flex;
 	flex-direction: column;
 	margin: 0;
-	padding: 1rem;
+	padding: 0;
+}
+
+.site-main {
+	min-height: 60vh;
+
+}
+
+.site-body {
+	width: 100%;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.page-width, .site-main {
+	width: 60rem;
+	max-width: 100%;
+	margin: auto;
+	padding: 0 1rem;
+}
+
+#hero img {
+	width: 100%;
+
 }

@@ -1,4 +1,8 @@
 ul.products {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 2rem;
 	margin: 0;
 	padding: 0;
 
@@ -6,55 +10,87 @@ ul.products {
 		list-style: none;
 		position: relative;
 		margin-bottom: 2em;
+		width: 12rem;
 
 		img {
 			display: block;
+			width: 12rem;
 		}
 
 		.button {
 			display: block;
 		}
 	}
-}
 
-@media screen and (min-width: 48em) {
-
-	ul.products {
-
-		li.product {
-
-			@include column-width(3);
-			float: left;
-			margin-right: $columns__margin;
-
-			&.first {
-				clear: both;
-			}
-
-			&.last {
-				margin-right: 0;
-			}
-		}
-	}
-
-	ul.products.columns-1 {
-
-		li.product {
-			float: none;
-			width: 100%;
-		}
+	h2 {
+		font-size: 1rem;
+		font-weight: normal;
+		margin: 0;
+		padding: 0;
 
 	}
 
-	@for $i from 2 through 6 {
 
-		ul.products.columns-#{$i} {
+	a {
+		text-decoration: none;
+		color: black;
+	}
 
-			li.product {
+	a:hover {
+		text-decoration: underline;
 
-				@include column-width( $i );
-			}
-
-		}
 	}
 }
+
+.related > ul.products {
+	justify-content: start;
+
+
+}
+
+.price {
+	font-weight: bold;
+
+}
+
+.woocommerce-LoopProduct-link > .onsale {
+	background-color: white;
+	padding: 0.3rem 0;
+	position: absolute;
+	width: 6.2rem;
+	top: 0.4rem;
+	right: -1.7rem;
+	transform: rotate(45deg);
+	text-align: center;
+	font-weight: bold;
+	clip-path: polygon(32% 0%, 0% 100%, 100% 100%, 68% 0%);
+}
+
+
+.add_to_cart_button, .product_type_grouped {
+	position: absolute;
+	top: 11rem;
+	right: -0.5rem;
+	width: 2rem;
+	height: 2rem;
+	background-color: white;
+	border: solid black 1px;
+	border-radius: 50%;
+	text-align: center;
+	color: $color__button !important;
+	font-weight: bold;
+	font-size: 0.5rem;
+	padding-top: 1rem;
+	text-transform: uppercase;
+
+	background-image: url("http://localhost:3000/wp-content/themes/zarya/assets/bag.svg");
+	background-repeat: no-repeat;
+	background-position: center center;
+
+}
+
+.add_to_cart_button:hover {
+	color: $color__button-hover !important;
+	text-decoration: none !important;
+}
+

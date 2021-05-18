@@ -4,13 +4,21 @@ input[type="reset"],
 input[type="submit"] {
 	border: 1px solid;
 	border-color: $color__border-button;
-	border-radius: 3px;
+	border-radius: 5%;
 	background: $color__background-button;
-	color: rgba(0, 0, 0, 0.8);
-	line-height: 1;
-	padding: 0.6em 1em 0.4em;
+	color: $color__button;
+	line-height: 0.8rem;
+	padding: 0.6em 1em;
+	font-size: 0.6rem;
+	font-weight: bold;
+	letter-spacing: 0.1rem;
+	text-align: center;
+
+	text-transform: uppercase;
+	cursor: pointer;
 
 	&:hover {
+		color: $color__button-hover;
 		border-color: $color__border-button-hover;
 	}
 

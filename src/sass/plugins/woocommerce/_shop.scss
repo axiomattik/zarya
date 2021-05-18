@@ -1,0 +1,47 @@
+.woocommerce-breadcrumb {
+	padding: 1rem 0;
+	border-bottom: solid #ddd 1px;
+}
+
+.woocommerce-result-count {
+	margin: 0;
+	padding: 0;
+	text-align: right;
+	font-weight: bold;
+}
+
+.woocommerce-ordering {
+	text-align: right;
+	margin: 1rem 0;
+	padding-bottom: 1rem;
+	border-bottom: solid #ddd 1px;
+	
+
+}
+
+.woocommerce-pagination {
+	display: flex;
+	justify-content: center;
+
+	a {
+		text-decoration: none;
+
+	}
+
+	ul {
+		display: flex;
+		margin: 1rem auto;
+		padding: 0;
+		list-style-type: none;
+		gap: 1rem;
+
+		li {
+			width: 2rem;
+			height: 1.8rem;
+			border: solid #ddd 1px;
+			text-align: center;
+
+		}
+	}
+
+}

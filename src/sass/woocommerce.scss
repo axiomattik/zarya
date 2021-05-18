@@ -13,6 +13,11 @@ $woocommerce__color-info: #3d9cd2;
 @import "abstracts/abstracts";
 
 /**
+ * Shop
+ */
+@import "plugins/woocommerce/shop";
+
+/**
  * Shop tables
  */
 @import "plugins/woocommerce/tables";

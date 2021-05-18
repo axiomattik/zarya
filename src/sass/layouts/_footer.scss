@@ -1,0 +1,49 @@
+#colophon {
+	border-top: solid black 1px;
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+
+	#footer-top {
+		display: flex;
+		justify-content: space-around;
+		padding: 1rem;
+	}
+
+	#footer-top > div{
+		flex-basis: 100%;
+	}
+
+	#footer-top-container {
+		background-color: #ddd;
+	}
+
+	#footer-bottom-container {
+		background-color: #ccc;
+	}
+
+	h3 {
+		margin: 0;
+		padding: 0;
+
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	a:hover {
+		text-decoration: underline;
+
+	}
+
+	.menu {
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+		}
+	}
+}
+

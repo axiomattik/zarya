@@ -18,8 +18,8 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div id="masthead-top">
+	<header id="masthead" class="site-header full-width">
+		<div id="masthead-top" class="page-width">
 
 			<div class="site-branding">
 				<?php
@@ -46,15 +46,14 @@
 				<a href="/cart/"><img src="<?php echo $uri; ?>/assets/bag.svg" alt="shopping bag icon"></a>
 			</div>
 		</div> <!-- masthead-top -->
-		<div id="masthead-bottom"> 
+		<div id="masthead-bottom" class="full-width"> 
 
-			<nav id="site-navigation" class="main-navigation">
+			<nav id="site-navigation" class="main-navigation page-width">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', '_s' ); ?></button>
 				<?php
 				wp_nav_menu(
 					array(
 						'theme_location' => 'site-navigation-menu',
-						'menu_id'        => 'site-navigation-menu',
 					)
 				);
 				?>
