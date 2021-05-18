@@ -148,7 +148,8 @@ function _s_scripts() {
 	wp_enqueue_style( '_s-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( '_s-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( '_s-script', get_template_directory_uri() . '/js/_s-min.js', array(), _S_VERSION, true );
+	// TODO: use min
+	wp_enqueue_script( '_s-script', get_template_directory_uri() . '/js/zarya.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
