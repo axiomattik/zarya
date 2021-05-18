@@ -50,7 +50,7 @@ if ( ! function_exists( '_s_setup' ) ) :
 		add_theme_support( 'menus' );
 		register_nav_menus(
 			array(
-				'menu-1' => __( 'Primary', '_s' ),
+				'hamburger-menu' => __( 'Primary', '_s' ),
 				'footer-left' => __('Support', '_s' ),
 				'footer-middle' => __('About', '_s' ),
 				'footer-right' => __('Shop', '_s' ),
