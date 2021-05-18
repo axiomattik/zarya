@@ -1,155 +1,120 @@
 
-.main-navigation {
-	display: block;
-	.menu {
-		margin: 1rem 0;
-	}
+@media screen and (min-width: 800px) {
 
-	.menu-item-has-children {
-		position: relative;
-		padding-right: 1.2rem;
-
-		&::after{
-			content: url("assets/chevron.svg");
-			position: absolute;
-			right: 0;
-			top: 0.2rem;
-			width: 0.9rem;
-			opacity: 0.5;
+	.main-navigation {
+		display: block;
+		.menu {
+			margin: 1rem 0;
 		}
 
-		.menu-item-has-children::after {
-			transform: rotate(270deg);
+		.menu-item-has-children {
+			position: relative;
+			padding-right: 1.2rem;
 
+			&::after{
+				content: url("assets/chevron.svg");
+				position: absolute;
+				right: 0;
+				top: 0.2rem;
+				width: 0.9rem;
+				opacity: 0.5;
+			}
+
+			.menu-item-has-children::after {
+				transform: rotate(270deg);
+
+			}
 		}
-	}
-
-	ul {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		gap: 1.5rem;
-		justify-content: space-between;
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
 
 		ul {
-			gap: 0.2rem;
-			//background-color: $color__background-body;
-			background-color: white;
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 100%;
-			left: -999em;
-			z-index: 99999;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: 1.5rem;
+			justify-content: space-between;
+			list-style: none;
+			margin: 0;
+			padding-left: 0;
 
 			ul {
+				gap: 0.2rem;
+				//background-color: $color__background-body;
+				background-color: white;
+				box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+				float: left;
+				position: absolute;
+				top: 100%;
 				left: -999em;
-				top: 0.2rem;
+				z-index: 99999;
 
-				&::before {
-					bottom: 0;
-					height: auto;
-					left: auto;
-					right: -2rem;
-					top: 0;
-					width: 2rem;
+				ul {
+					left: -999em;
+					top: 0.2rem;
+
+					&::before {
+						bottom: 0;
+						height: auto;
+						left: auto;
+						right: -2rem;
+						top: 0;
+						width: 2rem;
+					}
+
+					&::after {
+						border-bottom-color: transparent;
+						border-left-color: #000;
+						bottom: auto;
+						right: -1.6rem;
+						top: 2rem;
+					}
 				}
 
-				&::after {
-					border-bottom-color: transparent;
-					border-left-color: #000;
-					bottom: auto;
-					right: -1.6rem;
-					top: 2rem;
+				li {
+
+					&:hover > ul,
+					&:focus > ul,
+					&.focus > ul{
+						right: calc(100%);
+					}
+				}
+
+				a {
+					width: 200px;
+				}
+
+				:hover > a,
+				.focus > a {
+				}
+
+				a:hover,
+				a.focus {
 				}
 			}
 
-			li {
-
-				&:hover > ul,
-				&:focus > ul,
-				&.focus > ul{
-					right: calc(100%);
-				}
-			}
-
-			a {
-				width: 200px;
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
+			li:hover > ul,
+			li.focus > ul {
+				left: auto;
 			}
 		}
 
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
+		li {
+			position: relative;
+
+			&:hover > a,
+			&.focus > a {
+			}
+		}
+
+		a {
+			display: block;
+			text-decoration: none;
+		}
+
+		.current_page_item > a,
+		.current-menu-item > a,
+		.current_page_ancestor > a,
+		.current-menu-ancestor > a {
 		}
 	}
 
-	li {
-		position: relative;
-
-		&:hover > a,
-		&.focus > a {
-		}
-	}
-
-	a {
-		display: block;
-		text-decoration: none;
-	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
-	}
-}
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
-
-@media screen and (min-width: 37.5em) {
-
-	.menu-toggle {
-		display: none;
-	}
-
-	.main-navigation ul {
-		display: flex;
-	}
-}
-
-.comment-navigation,
-.posts-navigation,
-.post-navigation {
-
-	.site-main & {
-		margin: 0 0 1.5em;
-	}
-
-	.nav-links {
-		display: flex;
-	}
-
-	.nav-previous {
-		flex: 1 0 50%;
-	}
-
-	.nav-next {
-		text-align: end;
-		flex: 1 0 50%;
-	}
 }
