@@ -1,6 +1,9 @@
 .woocommerce-breadcrumb {
 	padding: 1rem 0;
 	border-bottom: solid #ddd 1px;
+	a {
+		text-decoration: none;
+	}
 }
 
 .woocommerce-result-count {
