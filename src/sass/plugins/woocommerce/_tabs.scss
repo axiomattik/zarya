@@ -1,0 +1,48 @@
+.woocommerce-tabs {
+	display: flex;
+	flex-direction: column;
+	min-width: 100%;
+	margin-bottom: 3rem;
+
+	ul.tabs {
+		display: flex;
+		align-items: start;
+		margin: 0;
+		padding: 0;
+
+		.active {
+			background-color: #eee;
+
+		}
+
+		li {
+			margin: 0;
+			padding: 0.2rem 1rem;
+			background-color: #ddd;
+
+			a {
+				text-decoration: none;
+
+			}
+
+		}
+
+	}
+
+
+	.woocommerce-Tabs-panel {
+		margin: 0;
+		padding: 1rem;
+		background-color: #eee;
+
+		h2 {
+			display: none;
+		}
+
+		div {
+
+		}
+
+	}
+
+}
