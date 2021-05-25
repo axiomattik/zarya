@@ -7,14 +7,14 @@ ul.products {
 	padding: 0;
 
 	li.product {
+		flex: 1 1 12rem;
 		list-style: none;
 		position: relative;
 		margin-bottom: 2em;
-		width: 12rem;
 
 		img {
 			display: block;
-			width: 12rem;
+			width: 100%;
 		}
 
 		.button {
@@ -69,8 +69,8 @@ ul.products {
 
 .add_to_cart_button, .product_type_grouped {
 	position: absolute;
-	top: 11rem;
-	right: -0.5rem;
+	top: 80%;
+	right: -2%;
 	width: 2rem;
 	height: 2rem;
 	background-color: white;
