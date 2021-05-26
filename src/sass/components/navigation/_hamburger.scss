@@ -28,9 +28,13 @@
 /********/
 
 .hamburger-menu {
+
+	&, ul {
+		margin: 0;
+		padding: 0.5rem 1rem;
+	}
+
   box-sizing: border;
-  margin: 0;
-  padding: 0.5rem 1rem;
   display: block;
   position: absolute;
   top: var(--header-height);
@@ -38,7 +42,6 @@
   width: var(--menu-width);
   text-align: left;
   z-index: 2;
-  list-style-type: none;
   background-color: var(--menu-bg-col);
   overflow-y: scroll;
   overflow-x: hidden;
@@ -46,6 +49,30 @@
               visibility 1s;
   left: calc(-1 * var(--menu-width));
   visibility: hidden;
+	font-size: 1rem;
+
+	li {
+		list-style-type: none;
+		margin: 0;
+		padding: 0.2rem 0;
+
+
+		a {
+			text-decoration: none;
+			display: block;
+		}
+
+	}
+
+	li.page_item_has_children {
+		border-bottom: solid var(--menu-item-border-col) 1px;
+
+		& > a {
+			font-weight: bold;
+
+		}
+	}
+
 }
 
 .hamburger-menu-visible {
@@ -53,30 +80,13 @@
   visibility: visible;
 }
 
-.hamburger-menu li {
-  margin: 0;
-  padding: 0.5rem 0;
-  border-bottom: solid var(--menu-item-border-col) 2px;
-  font-size: 1.5rem;
-}
-
-.hamburger-menu li a {
-  text-decoration: none;
-  display: block;
-}
-
-.hamburger-menu li:hover {
-  background-color: var(--menu-item-selected-col);
-}
-
-
 /* Submenus */
 /************/
 
 .hamburger-submenu {
   box-sizing: border;
   margin: 0;
-  padding: 0 0 0 0.5rem;
+  padding: 0 0 0 0.2rem;
   list-style-type: none;
   transition: max-height 1s, visibility 1s;
   visibility: hidden;
