@@ -124,6 +124,13 @@ window.addEventListener("load", function() {
 })();
 
 (function() {
+	window.addEventListener("load", function() {
+		let loader = document.querySelector("#loader");
+		loader.classList.add("done");
+	});
+})();
+
+(function() {
 	/* ensure a uniform height for woocommerce tab panels */
 
 	function adjustTabPanelHeights() {
