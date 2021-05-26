@@ -1,8 +1,17 @@
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 960px) {
 
-	.main-navigation {
-		display: block;
+	#site-navigation {
+		background-color: #eee;
+		border-top: solid black 2px;
+		border-bottom: solid black 1px;
+
+		.desktop-menu {
+			padding: 1rem;
+
+		}
+
+
 		.menu {
 			margin: 1rem 0;
 		}

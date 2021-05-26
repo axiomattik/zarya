@@ -21,6 +21,7 @@
 	<div id="masthead-container" class="full-width">
 
 		<header id="masthead" class="site-header page-width">
+
 			<nav id="hamburger-nav" class="main-navigation">
 				<button 
 					id="hamburger-button"
@@ -43,7 +44,8 @@
 					)
 				);
 				?>
-			</nav><!-- #site-navigation -->
+
+			</nav><!-- #hamburger-nav -->
 
 			<div class="site-branding">
 				<?php
@@ -70,6 +72,22 @@
 				<a href="/cart/"><img src="<?php echo $uri; ?>/assets/bag.svg" alt="shopping bag icon"></a>
 			</div>
 
+
 		</header><!-- #masthead -->
+
+		<nav id="site-navigation" class="main-navigation">
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'desktop-menu',
+					'menu_class' => 'desktop-menu page-width',
+					'menu_id' => 'desktop-menu',
+					'container' => 'div',
+				)
+			);
+			?>
+		</nav>
+
+
 	</div><!-- #masthead-container -->
 	<div class="site-body">

@@ -1,11 +1,17 @@
 #masthead {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 }
 
 #masthead > * {
 	flex-basis: 4rem;
+
+}
+
+#site-navigation { // by default hide the desktop menu 
+	display: none; 
 
 }
 
@@ -69,3 +75,16 @@
 	}
 }
 
+@media screen and (min-width: 960px) {
+
+	#hamburger-nav {
+		display: none;
+	}
+
+	#site-navigation {
+		display: flex;
+		flex-direction: row;
+		flex-basis: 100%;
+
+	}
+}
