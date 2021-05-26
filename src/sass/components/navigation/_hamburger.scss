@@ -16,9 +16,10 @@
 /***********/
 
 .prevent-scroll {
-  height: 100%;
-  max-height: 100%;
-  overflow: hidden;
+	margin: 0;
+  height: 100vh;
+  max-height: 100vh;
+  overflow-y: hidden;
 }
 
 

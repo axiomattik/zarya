@@ -113,6 +113,7 @@ window.addEventListener("load", function() {
 		hamburgerOverlay.classList.toggle('hamburger-overlay-visible');
 		hamburgerMenu.classList.toggle('hamburger-menu-visible');
 		document.body.classList.toggle('prevent-scroll');
+		document.documentElement.classList.toggle('prevent-scroll');
 	}
 
 
