@@ -8,44 +8,31 @@
 
 	<footer id="colophon" class="site-footer full-width">
 		<div id="footer-top-container" class="full-width">
-			<div id="footer-top" class="page-width">
+			<div id="footer-top" class="full-width">
 
-				<div>
-					<h3>Help and Support</h3>
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'footer-left',
-							'depth' => 1,
-						)
-					);
-					?>
-				</div>
+			<?php 
+			$menus = get_registered_nav_menus();
+			foreach ($menus as $slug => $name):
+				if ( strpos( $slug, "footer" ) === 0 ): ?>
 
-				<div>
-					<h3>About <?php echo get_bloginfo('name'); ?></h3>
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'footer-middle',
-							'depth' => 1,
-							'fallback_cb' => false,
-						)
-					);
-					?>
-				</div>
+					<div class="footer-menu-wrapper full-width">
+						<div class="footer-menu page-width">
+							<h3><?php echo $name; ?></h3>
+							<div class="chevron"></div>
+							<?php
+							wp_nav_menu(
+								array(
+									'theme_location' => $slug,
+									'depth' => 1,
+								)
+							);
+							?>
+						</div>
+					</div>
 
-				<div>
-					<h3>Shop</h3>
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'footer-right',
-							'depth' => 1,
-						)
-					);
-					?>
-				</div>
+				<?php endif;
+			endforeach;
+			?>
 			</div><!-- footer-top -->
 		</div><!-- footer-top-container -->
 		<div id="footer-bottom-container" class="full-width">

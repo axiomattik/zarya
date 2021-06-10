@@ -7,12 +7,37 @@
 
 	#footer-top {
 		display: flex;
+		flex-direction: column;
 		justify-content: space-around;
-		padding: 1rem;
-	}
 
-	#footer-top > div{
-		flex-basis: 100%;
+		.footer-menu {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			align-items: center;
+			padding-top: 0.4rem;
+			padding-bottom: 0.4rem;
+
+			.chevron::after {
+				left: 0;
+			}
+
+			&:hover {
+				cursor: pointer;
+
+			}
+		}
+
+		.menu {
+			flex-basis: 100%;
+
+		}
+
+		& > div {
+			border-bottom: solid #ccc 1px;
+			width: 100%;
+
+		}
 	}
 
 	#footer-top-container {
@@ -40,6 +65,7 @@
 
 	.menu {
 		ul {
+			display: none;
 			margin: 0;
 			padding: 0;
 			list-style-type: none;
