@@ -20,7 +20,6 @@
 
 			&:hover {
 				cursor: pointer;
-
 			}
 		}
 
@@ -61,11 +60,21 @@
 
 	.menu {
 		ul {
-			display: none;
 			margin: 0;
 			padding: 0;
 			list-style-type: none;
+			li {
+				padding: 0.5rem;
+
+			}
+		}
+
+		&.hidden {
+			ul {
+				display: none;
+			}
 		}
 	}
+
 }
 

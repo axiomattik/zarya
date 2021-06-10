@@ -24,6 +24,7 @@
 								array(
 									'theme_location' => $slug,
 									'depth' => 1,
+									'menu_class' => 'menu hidden',
 								)
 							);
 							?>
