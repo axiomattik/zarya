@@ -1,7 +1,5 @@
-.single-product {
-
-	.onsale {
-		background-color: teal;
+.product-type-simple, .product-type-grouped {
+	&>.onsale {
 		background-color: white;
 		padding: 0.3rem 0;
 		position: absolute;
@@ -13,9 +11,12 @@
 		font-weight: bold;
 		clip-path: polygon(32% 0%, 0% 100%, 100% 100%, 68% 0%);
 		z-index: 100;
-
-
 	}
+}
+
+
+
+.single-product {
 
 	div.entry-summary {
 		display: flex;
@@ -53,7 +54,7 @@
 	}
 	
 
-	div.product {
+	div.product-type-simple {
 		position: relative;
 		display: flex;
 		flex-wrap: wrap;
@@ -64,8 +65,29 @@
 
 			.woocommerce-product-gallery__trigger {
 				position: absolute;
-				top: 1.75em;
-				right: 1em;
+				top: 1.75rem;
+				right: 1rem;
+				display: block;
+				z-index: 99;
+			}
+
+		}
+
+
+	}
+
+	div.product-type-grouped {
+		position: relative;
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+
+		.woocommerce-product-gallery {
+
+			.woocommerce-product-gallery__trigger {
+				position: absolute;
+				top: 1.75rem;
+				left: 14.5rem;
 				display: block;
 				z-index: 99;
 			}
