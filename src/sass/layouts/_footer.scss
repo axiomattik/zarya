@@ -41,6 +41,25 @@
 
 	#footer-bottom-container {
 		background-color: #ccc;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+
+		#footer-bottom {
+			display: flex;
+
+			span:nth-child(1) {
+				flex-basis: 100%;
+			}
+
+			div {
+				width: 50%;
+				text-align: right;
+
+			}
+
+
+		}
+
 	}
 
 	h3 {

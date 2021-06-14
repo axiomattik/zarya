@@ -38,25 +38,12 @@
 		</div><!-- footer-top-container -->
 		<div id="footer-bottom-container" class="full-width">
 			<div id="footer-bottom" class="page-width">
-				<div id="footer-bottom-left">
-
-				</div><!-- footer-bottom-left -->
-
-				<div id="footer-bottom-right">
-					<div class="site-info">
-						<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'zarya' ) ); ?>">
-							<?php
-							/* translators: %s: CMS name, i.e. WordPress. */
-							printf( esc_html__( 'Proudly powered by %s', 'zarya' ), 'WordPress' );
-							?>
-						</a>
-						<span class="sep"> | </span>
-							<?php
-							/* translators: 1: Theme name, 2: Theme author. */
-							printf( esc_html__( 'Theme: %1$s by %2$s.', 'zarya' ), 'zarya', '<a href="https://automattic.com/">Automattic</a>' );
-							?>
-					</div><!-- .site-info -->
-				</div><!-- footer-bottom-right -->
+				<span>© <?php echo get_bloginfo("name") . " " . date("Y"); ?></span>
+				<div>
+				<span><a href="/privacy-policy/">Privacy</a></span>
+				<span class="sep"> | </span>
+				<span><a href="/terms-and-conditions/">Terms & Conditions</a></span>
+				</div>
 			</div><!-- footer-bottom -->
 		</div><!-- footer-bottom-container -->
 	</footer><!-- #colophon -->
