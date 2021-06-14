@@ -21,12 +21,10 @@
 	div.entry-summary {
 		display: flex;
 		flex-direction: column;
-		gap: 0.2rem;
 		border: solid #ddd 1px;
 		padding: 1rem;
-		margin: 1rem;
 		box-shadow: 4px 4px 4px 0 rgba(0,0,0,.06);
-
+		width: 100%;
 
 		h1, p {
 			margin: 0;
