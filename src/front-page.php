@@ -1,6 +1,6 @@
 <?php
 /**
- * @package _s
+ * @package Zarya
  */
 get_header();
 ?>
