@@ -18,11 +18,14 @@ body.single-product {
 		display: none !important;
 	}
 
-
-
 	/* hide the magnifying glass */
 	a.woocommerce-product-gallery__trigger {
 		display: none;
+	}
+
+	div.woocommerce-variation-description {
+		margin-bottom: 1rem;
+
 	}
 
 	figure.woocommerce-product-gallery__wrapper {
