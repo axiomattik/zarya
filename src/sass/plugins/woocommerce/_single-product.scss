@@ -13,6 +13,13 @@ body.single-product {
 		display: none;
 	}
 
+	/* hide reset variations link */
+	a.reset_variations {
+		display: none !important;
+	}
+
+
+
 	/* hide the magnifying glass */
 	a.woocommerce-product-gallery__trigger {
 		display: none;
