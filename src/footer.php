@@ -40,9 +40,9 @@
 			<div id="footer-bottom" class="page-width">
 				<span>© <?php echo get_bloginfo("name") . " " . date("Y"); ?></span>
 				<div>
-				<span><a href="/privacy-policy/">Privacy</a></span>
+				<span><a href="<?php echo get_permalink(get_option('wp_page_for_privacy_policy')); ?>">Privacy</a></span>
 				<span class="sep"> | </span>
-				<span><a href="/terms-and-conditions/">Terms & Conditions</a></span>
+				<span><a href="<?php echo get_permalink(get_option('woocommerce_terms_page_id')); ?>">Terms & Conditions</a></span>
 				</div>
 			</div><!-- footer-bottom -->
 		</div><!-- footer-bottom-container -->
