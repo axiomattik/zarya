@@ -71,8 +71,8 @@
 
 			<div id="ecommerce-menu" class="secondary-navigation">
 				<?php $uri = get_template_directory_uri(); ?>
-				<a href="/my-account/"><img src="<?php echo $uri; ?>/assets/account.svg" alt="account icon"></a>
-				<a href="/cart/"><img src="<?php echo $uri; ?>/assets/bag.svg" alt="shopping bag icon"></a>
+				<a href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>"><img src="<?php echo $uri; ?>/assets/account.svg" alt="account icon"></a>
+				<a href="<?php echo get_permalink(get_option('woocommerce_cart_page_id')); ?>"><img src="<?php echo $uri; ?>/assets/bag.svg" alt="cart icon"></a>
 			</div>
 
 
