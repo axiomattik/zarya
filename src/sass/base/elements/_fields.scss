@@ -17,7 +17,8 @@ textarea {
 	color: $color__text-input;
 	border: 1px solid $color__border-input;
 	border-radius: 3px;
-	padding: 3px;
+	padding: 0.5rem;
+	width: 100%;
 
 	&:focus {
 		color: $color__text-input-focus;
@@ -27,9 +28,5 @@ textarea {
 select {
 	border: 1px solid $color__border-input;
 	background-color: white;
-	padding: 0.5rem;
 }
 
-textarea {
-	width: 100%;
-}

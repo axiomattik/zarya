@@ -1,3 +1,15 @@
+span.selection>span {
+	border: solid red 1px !important;
+}
+
+#place_order {
+	width: 100%;
+	padding: 0.8rem;
+	font-size: 1rem;
+
+}
+
+
 @media screen and (min-width: 768px) {
 
 	.col2-set {

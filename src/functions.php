@@ -199,3 +199,10 @@ function zarya_add_to_cart_text() {
 //add_filter( 'woocommerce_product_single_add_to_cart_text', 'zarya_add_to_cart_text' );
 add_filter( 'woocommerce_product_add_to_cart_text', 'zarya_add_to_cart_text' );
 
+
+
+/* Make minimum quantity of product 1 */
+function zarya_quantity_input_min() {
+	return 1;
+}
+add_filter('woocommerce_quantity_input_min', 'zarya_quantity_input_min');

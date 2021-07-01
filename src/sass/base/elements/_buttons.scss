@@ -1,7 +1,8 @@
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
+input[type="submit"],
+.checkout-button {
 	border: 1px solid;
 	border-color: $color__border-button;
 	border-radius: 5%;
@@ -13,17 +14,23 @@ input[type="submit"] {
 	font-weight: bold;
 	letter-spacing: 0.1rem;
 	text-align: center;
+	text-decoration: none;
 
 	text-transform: uppercase;
 	cursor: pointer;
 
 	&:hover {
-		color: $color__button-hover;
+		color: $color__button-hover !important;
 		border-color: $color__border-button-hover;
 	}
 
 	&:active,
 	&:focus {
 		border-color: $color__border-button-focus;
+	}
+
+	&:visited {
+		color: $color__button;
+
 	}
 }

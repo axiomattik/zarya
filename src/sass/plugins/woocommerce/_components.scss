@@ -216,6 +216,54 @@ p.stars {
 }
 
 /**
+ * Quantity Input
+ */
+
+div.quantity {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: solid #aaa 1px;
+	border-radius: 0.2rem;
+	width: min-content;
+	margin-bottom: 0.8rem;
+
+	&>* {
+		width: 2.4rem;
+		height: 2.4rem;
+		text-align: center;
+		font-size: 1rem;
+		margin: 0;
+		padding: 0;
+		border: none;
+	}
+
+	button.increment, button.decrement {
+		color: black;
+		background-color: white;
+		padding-bottom: 0.3rem;
+	}
+
+	button.quantity__disabled {
+		color: #ccc;
+
+	}
+
+	&>input.qty {
+		appearance: textfield;
+		border-left: solid #bbb 1px;
+		border-right: solid #bbb 1px;
+		border-radius: 0;
+		width: 2.6rem;
+		font-weight: bold;
+		padding-bottom: 0.2rem;
+	}
+
+}
+
+
+
+/**
  * Notices
  */
 .woocommerce-message,

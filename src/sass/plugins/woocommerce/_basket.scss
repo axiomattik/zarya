@@ -1,0 +1,156 @@
+table.shop_table {
+	line-height: 1rem;
+
+	thead {
+		display: none;
+
+	}
+
+	tr.cart_item {
+		display: grid;
+		grid-template-columns: 1fr 3fr 2fr;
+		grid-template-areas:
+			"thumbnail price remove"
+			"thumbnail name ."
+			"thumbnail quantity ."
+			"thumbnail subtotal .";
+		justify-content: start;
+		gap: 0.2rem 1rem;
+		padding: 1rem 0 1rem 0;
+		margin: 0;
+		border-bottom: solid #ddd 1px;
+		border-top: solid #ddd 1px;
+
+		td.product-thumbnail {
+			grid-area: thumbnail;
+			min-width: 8rem;
+		}
+
+		td.product-remove {
+			grid-area: remove;
+			justify-self: end;
+
+			a {
+				text-decoration: none;
+				color: #888;
+				font-size: 1.2rem;
+			}
+
+		}
+
+		td.product-name {
+			grid-area: name;
+
+			a {
+				text-decoration: none;
+				color: $color__text-main;
+			}
+		}
+
+		td.product-price {
+			grid-area: price;
+			font-weight: bold;
+			font-size: 1.2rem;
+		}
+
+		td.product-quantity {
+			grid-area: quantity;
+		}
+
+		td.product-subtotal{
+			grid-area: subtotal;
+			font-weight: bold;
+			font-size: 0.9rem;
+
+			&::before {
+				content: "Subtotal: ";
+
+			}
+		}
+	}
+
+	div.coupon {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: solid #ddd 1px;
+		margin: 0;
+		padding: 1rem 0 1.4rem 0;
+
+		label {
+			flex-basis: 100%;
+			padding: 0 0 0.4rem 0;
+			margin: 0;
+			font-weight: bold;
+		}
+
+		#coupon_code {
+			flex-basis: 60%;
+			padding: 0.4rem;
+		}
+
+		button[name="apply_coupon"] {
+			flex-basis: 35%;
+			height: 2.2rem;
+		}
+	}
+
+	td.actions>button[type="submit"] {
+		display: none;
+	}
+
+
+
+}
+
+
+div.cart-collaterals {
+	h2 {
+		display: none;
+
+	}
+
+	a.checkout-button {
+		display: block;
+		width: 100%;
+		font-size: 1rem;
+		line-height: 1.2rem;
+	}
+
+	tr.cart-subtotal,
+	tr.order-total {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 0.2rem;
+	}
+
+}
+
+
+@media screen and (min-width: 768px) {
+	div.woocommerce {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 2rem;
+
+		div.cart-collaterals {
+
+			div.cart_totals {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				border: solid 1px #ddd;
+				padding: 1rem;
+				height: 10.25rem;
+				box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+				min-width: 18rem;
+
+			}
+		}
+
+
+
+	}
+}
