@@ -272,6 +272,22 @@ div.quantity {
 /**
  * Notices
  */
+div.woocommerce-notices-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 0;
+	z-index: 9999;
+	text-align: center;
+
+	div.woocommerce-message, ul.woocommerce-error {
+		padding: 0.6rem;
+		box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+
+	}
+}
+
 .woocommerce-message,
 .woocommerce-info,
 .woocommerce-error,
