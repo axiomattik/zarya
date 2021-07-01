@@ -242,11 +242,17 @@ div.quantity {
 		color: black;
 		background-color: white;
 		padding-bottom: 0.3rem;
+
+		&:hover {
+			color: black !important; /* overrides default button hover color */
+		}
 	}
 
 	button.quantity__disabled {
 		color: #ccc;
-
+		&:hover {
+			color: #ccc !important;
+		}
 	}
 
 	&>input.qty {
