@@ -10,10 +10,23 @@
 		}, 500);
 	});
 
+
+	/* remove notifications if closed by user or after a certain time has elapsed */
 	jQuery(document.body).on('wc_fragments_refreshed', function() {
-		let msgdiv = document.querySelector('div.woocommerce-notices-wrapper');
-		let msg = msgdiv.innerText;
-		console.log(msgdiv.innerText);
+
+		let closeButtons = document
+			.querySelectorAll('div.woocommerce-notices-wrapper span.remove');
+
+		for (let cb of closeButtons) {
+			cb.addEventListener('click', function(e) {
+				let notice = e.target.parentElement;
+				notice.parentElement.removeChild(notice);
+			})
+			
+			setTimeout(function() {
+				cb.click();
+			}, 2000);
+		}
 	});
 
 })();
