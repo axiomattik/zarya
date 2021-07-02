@@ -267,7 +267,7 @@ window.addEventListener("load", function() {
 			
 			setTimeout(function() {
 				cb.click();
-			}, 2000);
+			}, 4000);
 		}
 	});
 

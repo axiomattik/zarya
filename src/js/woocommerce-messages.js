@@ -25,7 +25,7 @@
 			
 			setTimeout(function() {
 				cb.click();
-			}, 2000);
+			}, 4000);
 		}
 	});
 
