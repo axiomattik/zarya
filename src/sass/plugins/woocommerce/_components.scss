@@ -279,13 +279,31 @@ div.woocommerce-notices-wrapper {
 	width: 100%;
 	padding: 0;
 	z-index: 9999;
-	text-align: center;
 
-	div.woocommerce-message, ul.woocommerce-error {
+	div, ul {
+		position: absolute;
 		padding: 0.6rem;
 		box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
-
+		width: 100%;
+		text-align: center;
 	}
+
+	.remove {
+		text-decoration: none;
+		float: right;
+		margin-top: -0.1rem;
+		margin-right: 0.5rem;
+		cursor: pointer;
+		opacity: 0.7;
+
+		&:hover {
+			opacity: 1;
+
+		}
+	}
+
+
+
 }
 
 .woocommerce-message,
