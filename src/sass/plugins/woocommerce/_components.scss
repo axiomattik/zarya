@@ -272,6 +272,12 @@ div.quantity {
 /**
  * Notices
  */
+
+@keyframes fadeOut {
+	0% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
 div.woocommerce-notices-wrapper {
 	position: fixed;
 	top: 0;
@@ -286,6 +292,11 @@ div.woocommerce-notices-wrapper {
 		box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 		width: 100%;
 		text-align: center;
+		animation-name: fadeOut;
+		animation-delay: 2s;
+		animation-duration: 2000ms;
+		animation-iteration-count: 1;
+		animation-fill-mode: forwards;
 	}
 
 	.remove {
