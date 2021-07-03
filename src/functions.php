@@ -206,3 +206,15 @@ function zarya_quantity_input_min() {
 	return 1;
 }
 add_filter('woocommerce_quantity_input_min', 'zarya_quantity_input_min');
+
+
+
+/* Request a WooCommerce notification via AJAX */
+function zarya_wc_notice() {
+	$message = $_POST["message"];
+	$notice_type = $_POST["notice_type"];
+	wc_add_notice($message, $notice_type);
+	wc_print_notices();
+	wp_die();
+}
+add_action( 'wp_ajax_nopriv_wc_notice', 'zarya_wc_notice' );
