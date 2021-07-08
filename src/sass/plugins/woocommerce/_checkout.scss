@@ -1,3 +1,7 @@
+div.woocommerce-billing-fields h3 {
+	margin-top: 0;
+}
+
 span.selection>span {
 	border: solid red 1px !important;
 }
@@ -6,6 +10,14 @@ span.selection>span {
 	width: 100%;
 	padding: 0.8rem;
 	font-size: 1rem;
+
+}
+
+ul.wc_payment_methods {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 1rem;
 
 }
 
