@@ -135,6 +135,11 @@ div.cart-collaterals {
 		align-items: flex-start;
 		gap: 2rem;
 
+		h2 {
+			display: none;
+
+		}
+		
 		div.cart-collaterals {
 
 			div.cart_totals {
