@@ -323,6 +323,17 @@ div.woocommerce-notices-wrapper {
 
 }
 
+
+.woocommerce-message, 
+.woocommerce-info,
+.woocommerce-Message {
+	padding: 0.5rem;
+	a.woocommerce-Button {
+		display: block;
+	}
+}
+
+
 .woocommerce-message,
 .woocommerce-info,
 .woocommerce-error,

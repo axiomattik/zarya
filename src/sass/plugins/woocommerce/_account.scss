@@ -33,12 +33,8 @@ div.woocommerce-MyAccount-content {
 		margin: 0;
 	}
 
-	div.woocommerce-message, div.woocommerce-Message {
-		padding: 0.5rem;
-		a.woocommerce-Button {
-			display: block;
-
-		}
+	form > h3 {
+		margin-top: 0; /* aligns 'billing address' and 'shipping address' with nav menu on edit address screens */
 
 	}
 }

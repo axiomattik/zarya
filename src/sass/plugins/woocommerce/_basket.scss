@@ -136,8 +136,7 @@ div.cart-collaterals {
 		gap: 2rem;
 
 		h2 {
-			display: none;
-
+			display: none; /* might be hiding something we want? */
 		}
 		
 		div.cart-collaterals {
