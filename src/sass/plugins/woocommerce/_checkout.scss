@@ -1,3 +1,31 @@
+table.woocommerce-checkout-review-order-table {
+	text-align: left;
+	padding: 0.4rem;
+	border-collapse: collapse;
+	border: solid #ddd 1px;
+
+	th, td {
+		padding: 0.4rem;
+
+	}
+
+	tbody td {
+		border-bottom: solid #ddd 1px;
+
+	}
+
+	tr td:nth-child(2),
+	tr th:nth-child(2) {
+		text-align: right;
+	}
+
+	thead, tfoot {
+		background-color: #eee;
+
+	}
+
+}
+
 div.woocommerce-billing-fields h3 {
 	margin-top: 0;
 }
