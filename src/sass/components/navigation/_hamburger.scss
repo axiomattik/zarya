@@ -1,17 +1,3 @@
-/* Variables */
-/*************/
-
-:root {
-  --header-height: 4.2rem;
-  --menu-width: 80vw;
-  --menu-bg-col: #ddd;
-  --menu-item-border-col: #eee;
-  --menu-item-selected-col: #fff;
-  --overlay-color: black;
-  --transition-speed: 0.1s;
-}
-
-
 /* Helpers */
 /***********/
 
@@ -37,17 +23,17 @@
   box-sizing: border;
   display: block;
   position: absolute;
-  top: var(--header-height);
-  height: calc(100vh - var(--header-height));
-  width: var(--menu-width);
+  top: $hamburger__header-height;
+  height: calc(100vh - #{$hamburger__header-height});
+  width: $hamburger__menu-width;
   text-align: left;
   z-index: 2;
-  background-color: var(--menu-bg-col);
+  background-color: $color__primary;
   overflow-y: scroll;
   overflow-x: hidden;
-  transition: left var(--transition-speed) linear,
+  transition: left $hamburger__transition-speed linear,
               visibility 1s;
-  left: calc(-1 * var(--menu-width));
+  left: calc(-1 * #{$hamburger__menu-width});
   visibility: hidden;
 	font-size: 1rem;
 
@@ -65,7 +51,7 @@
 	}
 
 	li.page_item_has_children {
-		border-bottom: solid var(--menu-item-border-col) 1px;
+		border-bottom: solid $color__accent-dark 1px;
 
 		& > a {
 			font-weight: bold;
@@ -186,14 +172,14 @@
 .hamburger-overlay {
   margin: 0;
   padding: 0;
-  background-color: var(--overlay-color);
+  background-color: $color__text-main;
   position: absolute;
-  top: var(--header-height);
+  top: $hamburger__header-height;
   left: 0;
   height: 100vh;
   width: 100%;
   opacity: 0;
-  transition: opacity calc(2*var(--transition-speed)) linear;
+  transition: opacity calc(2*#{$hamburger__transition-speed}) linear;
   z-index: -1;
 }
 

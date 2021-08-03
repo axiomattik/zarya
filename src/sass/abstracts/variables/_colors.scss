@@ -1,3 +1,8 @@
+$color__primary: #FCD8D4;
+$color__secondary: #FDF6F0;
+$color__accent-light: #F8E2CF;
+$color__accent-dark: #F5C6AA;
+
 $color__background-body: #fff;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
@@ -7,9 +12,11 @@ $color__background-ins: #fff9c0;
 $color__text-screen: #21759b;
 $color__text-input: #666;
 $color__text-input-focus: #111;
-$color__link: #1a73e8;
-$color__link-visited: #7b1fa2;
-$color__link-hover: #174ea6;
+
+$color__link: #404040;
+$color__link-visited: #404040;
+$color__link-hover: black;
+
 $color__text-main: #404040;
 
 $color__border-button: #ccc #ccc #bbb;
@@ -21,3 +28,7 @@ $color__button-hover: #eee;
 
 $color__border-input: #ccc;
 $color__border-abbr: #666;
+
+$hamburger__header-height: 4.2rem;
+$hamburger__menu-width: 80vw;
+$hamburger__transition-speed: 0.1s;

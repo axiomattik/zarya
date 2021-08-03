@@ -1,7 +1,7 @@
 #widget-area-container {
-	background-color: #eee;
+	background-color: $color__secondary;
 	overflow: hidden;
-	border-top: solid black 2px;
+	border-top: solid $color__accent-light 2px;
 	padding-bottom: 2rem;
 }
 

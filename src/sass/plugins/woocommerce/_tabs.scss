@@ -11,7 +11,8 @@
 		max-width: 24rem;
 
 		.active {
-			background-color: #eee;
+			background-color: $color__secondary;
+			opacity: 1;
 
 		}
 
@@ -19,7 +20,8 @@
 			height: 4rem;
 			margin: 0;
 			padding: 0.2rem 1rem;
-			background-color: #ddd;
+			background-color: $color__accent-light;
+			opacity: 0.7;
 			white-space: nowrap;
 			overflow: hidden;
 			text-overflow: ellipsis;
@@ -37,7 +39,7 @@
 	.woocommerce-Tabs-panel {
 		margin: 0;
 		padding: 1rem;
-		background-color: #eee;
+		background-color: $color__secondary;
 
 		h2 {
 			display: none;

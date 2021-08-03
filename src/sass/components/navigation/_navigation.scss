@@ -2,9 +2,9 @@
 @media screen and (min-width: 960px) {
 
 	#site-navigation {
-		background-color: #eee;
-		border-top: solid black 2px;
-		border-bottom: solid black 1px;
+		background-color: $color__primary;
+		border-top: solid $color__accent-dark 2px;
+		border-bottom: solid $color__accent-dark 1px;
 
 		.desktop-menu {
 			padding: 1rem;
@@ -47,14 +47,14 @@
 
 			ul {
 				gap: 0.2rem;
-				//background-color: $color__background-body;
-				background-color: white;
+				background-color: $color__secondary;
 				box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 				float: left;
 				position: absolute;
 				top: 100%;
 				left: -999em;
 				z-index: 99999;
+				padding: 0.4rem;
 
 				ul {
 					left: -999em;

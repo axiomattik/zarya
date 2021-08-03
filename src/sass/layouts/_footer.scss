@@ -1,5 +1,5 @@
 #colophon {
-	border-top: solid black 1px;
+	border-top: solid $color__accent-dark 1px;
 	display: flex;
 	flex-direction: column;
 	margin: 0;
@@ -29,18 +29,18 @@
 		}
 
 		& > div {
-			border-bottom: solid #ccc 1px;
+			border-bottom: solid $color__accent-dark 1px;
 			width: 100%;
 
 		}
 	}
 
 	#footer-top-container {
-		background-color: #ddd;
+		background-color: $color__accent-light;
 	}
 
 	#footer-bottom-container {
-		background-color: #ccc;
+		background-color: $color__accent-dark;
 		padding-top: 0.5rem;
 		padding-bottom: 0.5rem;
 
@@ -73,7 +73,7 @@
 	}
 
 	a:hover {
-		text-decoration: underline;
+		color: $color__link-hover;
 
 	}
 

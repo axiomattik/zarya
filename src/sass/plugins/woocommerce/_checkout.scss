@@ -1,17 +1,20 @@
+span.select2-selection {
+	height: 2.6rem !important;
+	padding-top: 0.4rem;
+}
+
 table.woocommerce-checkout-review-order-table {
 	text-align: left;
 	padding: 0.4rem;
 	border-collapse: collapse;
-	border: solid #ddd 1px;
+	border: solid $color__accent-dark 1px;
 
 	th, td {
 		padding: 0.4rem;
-
 	}
 
 	tbody td {
-		border-bottom: solid #ddd 1px;
-
+		border-bottom: solid $color__accent-light 1px;
 	}
 
 	tr td:nth-child(2),
@@ -20,18 +23,13 @@ table.woocommerce-checkout-review-order-table {
 	}
 
 	thead, tfoot {
-		background-color: #eee;
-
+		background-color: $color__secondary;
 	}
-
 }
+
 
 div.woocommerce-billing-fields h3 {
 	margin-top: 0;
-}
-
-span.selection>span {
-	border: solid red 1px !important;
 }
 
 #place_order {

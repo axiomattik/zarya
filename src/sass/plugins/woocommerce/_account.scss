@@ -1,6 +1,6 @@
 nav.woocommerce-MyAccount-navigation {
 	width: 100%;
-	background-color: #eee;
+	background-color: $color__secondary;
 	min-width: 14rem;
 	flex-basis: 30%;
 	ul {
@@ -16,7 +16,7 @@ nav.woocommerce-MyAccount-navigation {
 	li {
 		margin: 0.5rem 0 1rem 0;
 		padding-bottom: 1rem;
-		border-bottom: solid white 1px;
+		border-bottom: solid $color__accent-light 1px;
 	}
 
 	li:last-of-type {
