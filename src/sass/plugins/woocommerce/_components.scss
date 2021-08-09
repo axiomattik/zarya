@@ -275,7 +275,8 @@ div.quantity {
 
 /* hide notices that are placed incorrectly by WooCommerce */
 div.woocommerce > div.woocommerce-error,
-form.checkout > div.woocommerce-NoticeGroup-checkout
+form.checkout > div.woocommerce-NoticeGroup-checkout,
+div.woocommerce > div.woocommerce-form-login-toggle
 {
 	display: none;
 }
