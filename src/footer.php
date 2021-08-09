@@ -47,9 +47,6 @@
 			</div><!-- footer-bottom -->
 		</div><!-- footer-bottom-container -->
 	</footer><!-- #colophon -->
-
-	<?php global $template; echo basename($template); ?>
-
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

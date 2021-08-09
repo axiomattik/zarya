@@ -292,35 +292,92 @@ window.addEventListener("load", function() {
 })();
 
 (function() {
+
+	const removeElement = (e) => e.parentElement.removeChild(e);
+
+
+	const queryNotices = () =>
+		[...document.querySelectorAll("div.woocommerce-error"),
+		 ...document.querySelectorAll("div.woocommerce-message"),
+		 ...document.querySelectorAll("div.woocommerce-info")];
+
+
+	function relocateMisplacedNotice(notice) {
+		/* WooCommerce places some notices in seemingly arbitrary locations on the page
+		   This function moves a notice to the primary notices-wrapper */
+		let noticesWrapper = document.querySelector("div.woocommerce-notices-wrapper");
+		noticesWrapper.appendChild(notice);
+	}
+
+
+	function timeoutNotice(notice, delay=1000) {
+		function timeout() {
+			setTimeout(function() {
+				removeElement(notice);
+			}, delay);
+			document.removeEventListener('pointermove', timeout);
+		}
+
+		document.addEventListener('pointermove', timeout);
+	}
+
+
+	function initialiseCloseButton(notice) {
+		let closeButton = notice.children[0];
+		closeButton.addEventListener('click', function() {
+			removeElement(notice);
+		});
+	}
+
+
+	function initialiseNotices(notices) {
+		let closeDelay = 2000;
+		for (let n of notices) {
+			relocateMisplacedNotice(n);
+			initialiseCloseButton(n);
+			timeoutNotice(n, closeDelay);
+			closeDelay += 800;
+		}
+	}
 	
-	/* prevent woocommerce auto scrolling behaviour */
 	window.addEventListener("load", function() {
+		/* prevent woocommerce auto scrolling behaviour */
 		setTimeout(function() {
 			jQuery.scroll_to_notices = function() {
 				return;
 			};
-			console.log(jQuery.scroll_to_notices.toString());
 		}, 500);
-	});
 
 
-	/* remove notifications if closed by user or after a certain time has elapsed */
-	jQuery(document.body).on('wc_fragments_refreshed', function() {
-
-		let closeButtons = document
-			.querySelectorAll('div.woocommerce-notices-wrapper span.remove');
-
-		for (let cb of closeButtons) {
-			cb.addEventListener('click', function(e) {
-				let notice = e.target.parentElement;
-				notice.parentElement.removeChild(notice);
-			})
+		/* add event listeners to initialise notices */
+		jQuery(document.body).on('updated_checkout', function() {
+			initialiseNotices(queryNotices());
 			
-			setTimeout(function() {
-				cb.click();
-			}, 4000);
-		}
+		});
+
+		jQuery(document.body).on('wc_fragments_refreshed', function() {
+			initialiseNotices(queryNotices());
+		});
+
+
+		/* after checkout form is submitted, initialise notifications once they are returned */
+		let formCheckout = document.querySelector("form.checkout");
+		formCheckout.addEventListener("submit", function() {
+
+			let notificationChecker = setInterval(function() {
+				let notices = queryNotices();
+				if (notices) {
+					initialiseNotices(notices);
+					clearInterval(notificationChecker);
+				}
+			}, 400);
+
+		});
+
 	});
+
+
+
 
 })();
 

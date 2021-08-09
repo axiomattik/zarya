@@ -1,4 +1,4 @@
-<form role="search" ' . $aria_label . 'method="get" class="search-form" action="' . esc_url( home_url( '/' ) ) . '">
+<form role="search" ' . $aria_label . 'method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 	<label>
 		<span class="screen-reader-text"><?php echo _x( 'Search for:', 'label' ); ?></span>
 	</label>
