@@ -68,29 +68,10 @@ ul.products {
 
 
 .add_to_cart_button, .product_type_grouped {
-	position: absolute;
-	bottom: 10%;
-	right: 0;
-	width: 17%;
-	height: 15%;
-	background-color: white;
-	border: solid black 1px;
-	border-radius: 50%;
-	text-align: center;
-	color: $color__button !important;
-	font-weight: bold;
-	font-size: 0.5rem;
-	padding-top: 10%;
-	text-transform: uppercase;
-
-	background-image: url("/wp-content/themes/zarya/assets/bag.svg");
-	background-repeat: no-repeat;
-	background-position: center center;
 
 }
 
 .add_to_cart_button:hover {
-	color: $color__button-hover !important;
-	text-decoration: none !important;
+
 }
 

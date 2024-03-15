@@ -1,0 +1,70 @@
+#!/bin/bash
+
+# Variables
+THEMENAME=$(basename "$(pwd)")
+BLDROOT="bld/${THEMENAME}"
+
+
+# JavaScript Minification and Concatenation
+minifyJS() {
+	find src/js -type f -exec cat {} + | uglifyjs -o "${BLDROOT}/js/${THEMENAME}.min.js";
+}
+
+
+# Sass Compilation
+compileSass() {
+    sass src/sass/style.scss "${BLDROOT}/style.css"
+    sass src/sass/woocommerce.scss "${BLDROOT}/woocommerce.css"
+}
+
+
+# Distribution
+clean() {
+    rm -rf bld;
+}
+
+createDirectories() {
+	mkdir bld
+	mkdir "${BLDROOT}"
+	mkdir "${BLDROOT}/js"
+}
+
+copyFiles() {
+    rsync -av --exclude='js' --exclude='sass' src/ "${BLDROOT}/"
+}
+
+createArchive() {
+    zip -r "${THEMENAME}.zip" "${BLDROOT}"
+}
+
+# Monitoring
+monitor() {
+    while true; do
+        inotifywait -r -e modify,create,delete src/
+        build
+    done
+}
+
+# Build
+build() {
+    clean
+		createDirectories
+    minifyJS
+    compileSass
+    copyFiles
+}
+
+# Serve
+serve() {
+		php -S localhost:8000 -t ~/Desktop/zarya.uk/dev/wordpress
+}
+
+# Default task
+default() {
+    build
+    serve &
+    monitor
+}
+
+# Run default task
+default

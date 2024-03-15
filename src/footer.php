@@ -12,28 +12,33 @@
 
 			<?php 
 			$menus = get_registered_nav_menus();
-			foreach ($menus as $slug => $name):
-				if ( strpos( $slug, "footer" ) === 0 ): ?>
+			foreach ( $menus as $location => $description ) :
+				if ( ! str_contains( $location, 'footer' ) ) continue; 
+				if ( ! has_nav_menu( $location ) ) continue;
+
+			?>
 
 					<div class="footer-menu-wrapper full-width">
 						<div class="footer-menu page-width">
-							<h3><?php echo $name; ?></h3>
+							<h3><?php echo wp_get_nav_menu_name( $location ); ?></h3>
 							<div class="chevron"></div>
+
 							<?php
-							wp_nav_menu(
-								array(
-									'theme_location' => $slug,
-									'depth' => 1,
-									'menu_class' => 'menu hidden',
-								)
-							);
+							wp_nav_menu( array( 
+								'menu' => $location,
+								'depth' => 0,
+								'theme-location' => $location,
+								'conatiner' => 'div',
+								'container_class' => 'menu hidden',
+								'fallback_cb' => false,
+							));
 							?>
+
 						</div>
 					</div>
 
-				<?php endif;
-			endforeach;
-			?>
+			<?php endforeach; ?>
+
 			</div><!-- footer-top -->
 		</div><!-- footer-top-container -->
 		<div id="footer-bottom-container" class="full-width">
@@ -53,3 +58,4 @@
 
 </body>
 </html>
+

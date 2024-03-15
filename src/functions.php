@@ -21,16 +21,6 @@ if ( ! function_exists( 'zarya_setup' ) ) :
 	 * as indicating support for post thumbnails.
 	 */
 	function zarya_setup() {
-		/*
-		 * Make theme available for translation.
-		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on Zarya, use a find and replace
-		 * to change 'zarya' to the name of your theme in all the template files.
-		 */
-		load_theme_textdomain( 'zarya', get_template_directory() . '/languages' );
-
-		// Add default posts and comments RSS feed links to head.
-		add_theme_support( 'automatic-feed-links' );
 
 		/*
 		 * Let WordPress manage the document title.
@@ -50,11 +40,11 @@ if ( ! function_exists( 'zarya_setup' ) ) :
 		add_theme_support( 'menus' );
 		register_nav_menus(
 			array(
-				'hamburger-menu' => __( 'Hamburger', 'zarya' ),
 				'desktop-menu' => __( 'Desktop', 'zarya' ),
-				'footer-left' => __('Support', 'zarya' ),
-				'footer-middle' => __('About', 'zarya' ),
-				'footer-right' => __('Shop', 'zarya' ),
+				'hamburger-menu' => __( 'Hamburger', 'zarya' ),
+				'footer-left-menu' => __('Left Footer', 'zarya' ),
+				'footer-middle-menu' => __('Middle Footer', 'zarya' ),
+				'footer-right-menu' => __('Right Footer', 'zarya' ),
 			)
 		);
 
@@ -150,7 +140,7 @@ function zarya_scripts() {
 	wp_style_add_data( 'zarya-style', 'rtl', 'replace' );
 
 	// TODO: use min
-	wp_enqueue_script( 'zarya-script', get_template_directory_uri() . '/js/zarya.js', array(), ZARYA_VERSION, true );
+	wp_enqueue_script( 'zarya-script', get_template_directory_uri() . '/js/zarya.min.js', array(), ZARYA_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -194,11 +184,14 @@ if ( class_exists( 'WooCommerce' ) ) {
 
 /* Change 'add to cart' text */
 function zarya_add_to_cart_text() {
-	return __( 'Add', 'zarya' );
+	return __( 'Choose Options', 'zarya' );
 }
 //add_filter( 'woocommerce_product_single_add_to_cart_text', 'zarya_add_to_cart_text' );
-add_filter( 'woocommerce_product_add_to_cart_text', 'zarya_add_to_cart_text' );
+//add_filter( 'woocommerce_product_add_to_cart_text', 'zarya_add_to_cart_text' );
 
+
+/* Remove 'Add to Cart' button from shop page */
+remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart' );
 
 
 /* Make minimum quantity of product 1 */
