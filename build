@@ -7,7 +7,7 @@ BLDROOT="bld/${THEMENAME}"
 
 # JavaScript Minification and Concatenation
 minifyJS() {
-	find src/js -type f -exec cat {} + | uglifyjs -o "${BLDROOT}/js/${THEMENAME}.min.js";
+	find src/js -not -path '*/[@.]*' -type f -exec cat {} + | uglifyjs -o "${BLDROOT}/js/${THEMENAME}.min.js";
 }
 
 
@@ -40,7 +40,7 @@ createArchive() {
 # Monitoring
 monitor() {
     while true; do
-        inotifywait -r -e modify,create,delete src/
+        inotifywait -r -e modify,create,delete --exclude '\.sw.$' src/
         build
     done
 }
@@ -67,4 +67,5 @@ default() {
 }
 
 # Run default task
-default
+#default
+build

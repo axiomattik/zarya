@@ -29,8 +29,60 @@ function zarya_customize_register( $wp_customize ) {
 				'selector'        => '.site-description',
 				'render_callback' => 'zarya_customize_partial_blogdescription',
 			)
-		);
+	);
 	}
+
+	/* Colours */
+
+
+
+
+  /* Carousel */
+
+  $wp_customize->add_section( 'zarya_carousel', array(
+    'title' => __( 'Carousel', 'zarya' ),
+    'priority' => 35,
+    'capability' => 'edit_theme_options'
+  ) );
+
+	$wp_customize->add_setting( 'zarya_carousel_image_url', array(
+		'default' => '',
+		'sanitize_callback' => 'sanitize_url'
+	) );
+
+	$wp_customize->add_control( 'zarya_carousel_image_url', array(
+		'type' => 'url',
+		'label' => 'Image URL',
+		'section' => 'zarya_carousel',
+	) );
+
+
+	$wp_customize->add_setting( 'zarya_carousel_button_text', array(
+		'default' => '',
+		'sanitize_callback' => 'sanitize_text_field'
+	) );
+
+	$wp_customize->add_control( 'zarya_carousel_button_text', array(
+		'type' => 'text',
+		'label' => 'Button Text',
+		'section' => 'zarya_carousel',
+	) );
+
+
+	$wp_customize->add_setting( 'zarya_carousel_button_link', array(
+		'default' => '',
+		'sanitize_callback' => 'sanitize_url'
+	) );
+
+	$wp_customize->add_control( 'zarya_carousel_button_link', array(
+		'type' => 'url',
+		'label' => 'Button Link URL',
+		'section' => 'zarya_carousel',
+	) );
+
+
+
+
 }
 add_action( 'customize_register', 'zarya_customize_register' );
 

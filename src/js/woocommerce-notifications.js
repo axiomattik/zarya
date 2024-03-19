@@ -69,17 +69,21 @@
 
 		/* after checkout form is submitted, initialise notifications once they are returned */
 		let formCheckout = document.querySelector("form.checkout");
-		formCheckout.addEventListener("submit", function() {
+		if (formCheckout) {
 
-			let notificationChecker = setInterval(function() {
-				let notices = queryNotices();
-				if (notices) {
-					initialiseNotices(notices);
-					clearInterval(notificationChecker);
-				}
-			}, 400);
+			formCheckout.addEventListener("submit", function() {
 
-		});
+				let notificationChecker = setInterval(function() {
+					let notices = queryNotices();
+					if (notices) {
+						initialiseNotices(notices);
+						clearInterval(notificationChecker);
+					}
+				}, 400);
+
+			});
+
+		}
 
 	});
 

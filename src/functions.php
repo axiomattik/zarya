@@ -211,3 +211,6 @@ function zarya_wc_notice() {
 	wp_die();
 }
 add_action( 'wp_ajax_nopriv_wc_notice', 'zarya_wc_notice' );
+
+
+
