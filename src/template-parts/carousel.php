@@ -22,7 +22,7 @@
 
 ?>
 
-<div id="zarya-carousel-container" class="page-width">
+<div id="zarya-carousel-container">
 
 	
 	<div id="zarya-carousel">
@@ -33,9 +33,7 @@
 
 			<div class="zarya-carousel-slide inactive">
 				<img src="<?php echo $slide->image_url; ?>">
-				<a href="<?php echo $slide->button_link; ?>" class="zarya-button">
-					<?php echo $slide->button_text; ?>
-				</a>
+				<a href="<?php echo $slide->button_link; ?>" class="zarya-button"><?php echo $slide->button_text; ?></a>
 			</div>
 
 		<?php endforeach; ?>

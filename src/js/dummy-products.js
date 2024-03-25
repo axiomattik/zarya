@@ -1,3 +1,4 @@
+/*
 (function() {
 /* For layout purposes, make sure that every shop page
 	 has a number of products divisible by 2, 3 and 4
@@ -5,7 +6,6 @@
 	 This is a hack to ensure all flex items are the same width.
 	 In the future these dummy elements could be dynamically filled
 	 with real products.
-*/
 
 const dummy = () => {
 	let li = document.createElement("li");
@@ -24,3 +24,5 @@ window.addEventListener("load", function() {
 
 
 })();
+
+*/

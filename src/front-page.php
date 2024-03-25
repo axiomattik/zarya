@@ -10,7 +10,7 @@ get_header();
 	</div>
 	<?php endif; ?>
 
-<main id="primary" class="site-main">
+<main id="primary">
 
 	<?php get_template_part( 'template-parts/carousel' ); ?>	
 

@@ -1,37 +1,22 @@
+// ensure the content does not exceed width of screen
 html, body {
 	max-width: 100%;
-	overflow-x: hidden;
 }
 
+// use flex for the #page div
 #page {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	margin: 0;
 	padding: 0;
 }
 
+#site-body {
+	width: 100%;
+}
+
 .site-main {
-	min-height: 62vh;
-	margin-bottom: 1.5rem !important;
-
-}
-
-.site-body {
-	width: 100%;
-}
-
-.full-width {
-	width: 100%;
-}
-
-.page-width, .site-main {
-	width: 60rem;
-	max-width: 100%;
-	margin: auto;
-	padding: 0 1rem;
-}
-
-#hero img {
-	width: 100%;
-
+	@include page-width;
+	min-height: 100vh;
 }

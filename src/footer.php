@@ -6,9 +6,9 @@
 ?>
 	</div><!-- .site-body -->
 
-	<footer id="colophon" class="site-footer full-width">
-		<div id="footer-top-container" class="full-width">
-			<div id="footer-top" class="full-width">
+	<footer id="site-footer">
+		<div id="footer-top-container">
+			<div id="footer-top">
 
 			<?php 
 			$menus = get_registered_nav_menus();
@@ -18,8 +18,8 @@
 
 			?>
 
-					<div class="footer-menu-wrapper full-width">
-						<div class="footer-menu page-width">
+					<div class="footer-menu-wrapper">
+						<div class="footer-menu">
 							<h3><?php echo wp_get_nav_menu_name( $location ); ?></h3>
 							<div class="chevron"></div>
 
@@ -28,8 +28,8 @@
 								'menu' => $location,
 								'depth' => 0,
 								'theme-location' => $location,
-								'conatiner' => 'div',
-								'container_class' => 'menu hidden',
+								'container' => 'div',
+								'container_class' => 'menu',
 								'fallback_cb' => false,
 							));
 							?>
@@ -41,8 +41,9 @@
 
 			</div><!-- footer-top -->
 		</div><!-- footer-top-container -->
-		<div id="footer-bottom-container" class="full-width">
-			<div id="footer-bottom" class="page-width">
+
+		<div id="footer-bottom-container">
+			<div id="footer-bottom">
 				<span>© <?php echo get_bloginfo("name") . " " . date("Y"); ?></span>
 				<div>
 				<span><a href="<?php echo get_permalink(get_option('wp_page_for_privacy_policy')); ?>">Privacy</a></span>
@@ -51,7 +52,7 @@
 				</div>
 			</div><!-- footer-bottom -->
 		</div><!-- footer-bottom-container -->
-	</footer><!-- #colophon -->
+	</footer>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

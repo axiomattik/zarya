@@ -1,3 +1,10 @@
+@mixin page-width {
+	width: 60rem;
+	max-width: 100%;
+	margin: auto;
+	padding: 0 1rem;
+}
+
 // Center block
 @mixin center-block {
 	display: block;

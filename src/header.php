@@ -23,17 +23,16 @@
 <?php get_template_part( 'template-parts/loader', 'none' ); ?>
 
 <?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'zarya' ); ?></a>
+<div id="page">
 
-	<div id="masthead-container" class="full-width">
+	<div id="masthead-container">
 
-		<header id="masthead" class="site-header page-width">
+		<header id="masthead">
 
-			<nav id="hamburger-nav" class="main-navigation">
+			<nav id="hamburger-nav">
 				<button 
 					id="hamburger-button"
-					class="hamburger hamburger--collapse hamburger-button" 
+					class="collapse" 
 					aria-label="Navigation Menu"
 					aria-controls="primary-menu" 
 					aria-expanded="false">
@@ -55,11 +54,10 @@
 
 			</nav><!-- #hamburger-nav -->
 
-			<div class="site-branding">
-				<?php
-				the_custom_logo();
-				if ( is_front_page() && is_home() ) :
-					?>
+			<div id="site-branding">
+				<div id="logo-container"><?php the_custom_logo(); ?></div>
+				<div id="title-desc-container">
+				<?php if ( is_front_page() && is_home() ) : ?>
 					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 					<?php
 				else :
@@ -72,23 +70,23 @@
 					?>
 					<p class="site-description"><?php echo $zarya_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 				<?php endif; ?>
-			</div><!-- .site-branding -->
+				</div>
+			</div><!-- #site-branding -->
 
-			<div id="ecommerce-menu" class="secondary-navigation">
+			<div id="ecommerce-menu">
 				<?php $uri = get_template_directory_uri(); ?>
 				<a href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>"><img src="<?php echo $uri; ?>/assets/account.svg" alt="account icon"></a>
 				<a href="<?php echo get_permalink(get_option('woocommerce_cart_page_id')); ?>"><img src="<?php echo $uri; ?>/assets/bag.svg" alt="cart icon"></a>
-			</div>
+			</div><!-- #ecommerce-menu -->
 
 
 		</header><!-- #masthead -->
 
-		<nav id="site-navigation" class="main-navigation">
+		<nav id="site-navigation">
 			<?php
 			wp_nav_menu(
 				array(
 					'theme_location' => 'desktop-menu',
-					'menu_class' => 'desktop-menu page-width',
 					'menu_id' => 'desktop-menu',
 					'container' => 'div',
 				)
@@ -98,4 +96,4 @@
 
 
 	</div><!-- #masthead-container -->
-	<div class="site-body">
+	<div id="site-body">

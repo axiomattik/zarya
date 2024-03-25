@@ -1,7 +1,9 @@
 #zarya-carousel-container {
+	@include page-width;
 	display: flex;
   flex-direction: column;
   align-items: center;
+	
 }
 
 #zarya-carousel {
@@ -18,13 +20,15 @@
 		left: 50%;
 		transform: translate(-50%, -50%) scale(2);
 	}
+
 	img {
 		position: relative;
 		z-index: -99;
+		max-width: 100%;
 	}
+
 	.inactive {
 		display: none;
-
 	}
 }
 

@@ -160,11 +160,11 @@ body.single-product {
 	}
 
 	&.in-stock {
-		color: $woocommerce__color-success;
+
 	}
 
 	&.out-of-stock {
-		color: $woocommerce__color-error;
+
 	}
 }
 
@@ -197,7 +197,7 @@ body.single-product {
 		}
 
 		div.entry-summary {
-			border: solid #eee 1px;
+			border: solid black 1px;
 			border-top: none;
 			padding: 1rem;
 		}
