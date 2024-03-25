@@ -1,5 +1,7 @@
 /node_modules
 /vendor
+/.sache-cache
+*.swp
 package-lock.json
 composer.lock
 style.css.map
