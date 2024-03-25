@@ -1,3 +1,9 @@
+#site-footer {
+	width: 100%;
+	padding-top: 4rem;
+	padding-bottom: 3rem;
+}
+
 .footer-menu ul {
 	list-style-type: none;
 
@@ -11,14 +17,27 @@
 		justify-content: space-between;
 	}
 
-	.footer-menu .chevron {
-		display: none;
+	.footer-menu {
+
+		h3 {
+			text-align: center;
+		}
+
+		.chevron {
+			display: none;
+		}
+
+		.menu ul {
+			border-right: solid #aaa 1px;
+			padding-left: 3rem;
+			padding-right: 3rem;
+		}
 
 	}
 
-	.footer-menu h3 {
-		text-align: center;
-
+	.footer-menu-wrapper:last-of-type .footer-menu .menu ul{
+		border: none;
 	}
+
 
 }
