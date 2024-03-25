@@ -1,0 +1,31 @@
+.chevron {
+  box-sizing: border-box;
+  float: right;
+  display: block;
+  transform: scale(1.5);
+  width: 22px;
+  height: 22px;
+  border: 2px solid transparent;
+  border-radius: 100px;
+  transition: 0.4s;
+}
+
+.chevron::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  transform: rotate(45deg);
+  left: 4px;
+  top: 2px
+}
+
+.rotate {
+  transform: scale(1.5) rotate(-180deg);
+  transition: 0.4s;
+}
+
