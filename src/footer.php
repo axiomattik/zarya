@@ -29,7 +29,7 @@
 								'depth' => 0,
 								'theme-location' => $location,
 								'container' => 'div',
-								'container_class' => 'menu',
+								'container_class' => 'menu hidden', /* hidden class affects mobile not desktop */
 								'fallback_cb' => false,
 							));
 							?>
