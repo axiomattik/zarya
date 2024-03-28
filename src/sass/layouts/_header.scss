@@ -46,12 +46,35 @@
 
 }
 
+@media screen and (max-width: 960px) {
+	#masthead div,
+	#masthead nav {
+		flex-grow: 1;
+	}
+
+	#logo-container img {
+		position: absolute;
+		left: 51%;
+		transform: translate(-50%, -50%) scale(0.75);
+
+	}
+
+	#ecommerce-menu {
+		text-align: right;
+	}
+
+
+
+}
+
 
 @media screen and (min-width: 960px) {
 	.site-title,
 	.site-description {
 		display: inline-block;
 	}
+
+
 
 	#hamburger-nav {
 		display: none;
