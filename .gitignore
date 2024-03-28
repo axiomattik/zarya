@@ -1,6 +1,6 @@
 /node_modules
 /vendor
-/.sache-cache
+.sass-cache
 *.swp
 package-lock.json
 composer.lock
