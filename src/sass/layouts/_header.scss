@@ -20,7 +20,6 @@
 
 #site-branding {
 	display: flex;
-	align-items: center;
 
 	img {
 		width: 3rem;
@@ -30,6 +29,7 @@
 	#title-desc-container {
 		display: flex;
 		flex-direction: column;
+		justify-content: space-around;
 		margin-left: 0.6rem;
 
 		p {

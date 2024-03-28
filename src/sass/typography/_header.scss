@@ -1,0 +1,48 @@
+#masthead-container {
+	a {
+		text-decoration: none;
+		color: black;
+		font-weight: bold;
+	}
+}
+
+
+#title-desc-container {
+	font-size: 1.3rem;
+}
+
+
+.site-title {
+	font-family: $secondary-font;
+}
+
+
+.site-description {
+	font-family: $accent-font;
+}
+
+
+#desktop-menu {
+	font-family: $secondary-font;
+	text-transform: uppercase;
+}
+
+#page {
+	font-family: $primary-font;
+}
+
+
+#site-footer {
+	font-family: $primary-font;
+	line-height: 2.5rem;
+
+	a {
+		text-decoration: none;
+		color: black;
+	}
+
+	a:hover {
+		text-decoration: underline;
+
+	}
+}
