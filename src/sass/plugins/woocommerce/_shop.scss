@@ -47,9 +47,10 @@
 		li {
 			width: 2rem;
 			height: 1.8rem;
-			border: solid #ddd 1px;
-			text-align: center;
-
+			border: solid #e0ddd6 1px; // TODO: scss variable
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 	}
 
