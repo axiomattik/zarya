@@ -14,10 +14,16 @@
 }
 
 .woocommerce-ordering {
-	text-align: right;
 	margin: 1rem 0;
 	padding-bottom: 1rem;
-	border-bottom: solid #ddd 1px;
+	border-bottom: solid #ddd 1px; // TODO: palette color
+	text-align: right;
+	select {
+		background-color: white; // TODO: set to palette color
+		border: none;
+		text-align: right;
+		color: blue; // TODO: set to palette color
+	}
 	
 
 }
