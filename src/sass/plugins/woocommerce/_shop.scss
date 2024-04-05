@@ -1,6 +1,6 @@
 .woocommerce-breadcrumb {
 	padding: 1rem 0;
-	border-bottom: solid #ddd 1px;
+	border-bottom: 1px solid;
 	a {
 		text-decoration: none;
 	}
@@ -16,13 +16,11 @@
 .woocommerce-ordering {
 	margin: 1rem 0;
 	padding-bottom: 1rem;
-	border-bottom: solid #ddd 1px; // TODO: palette color
+	border: solid 1px;
 	text-align: right;
 	select {
-		background-color: white; // TODO: set to palette color
 		border: none;
 		text-align: right;
-		color: blue; // TODO: set to palette color
 	}
 	
 
@@ -47,7 +45,7 @@
 		li {
 			width: 2rem;
 			height: 1.8rem;
-			border: solid #e0ddd6 1px; // TODO: scss variable
+			border: 1px solid;
 			display: flex;
 			justify-content: center;
 			align-items: center;

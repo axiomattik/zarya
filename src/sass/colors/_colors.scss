@@ -1,5 +1,11 @@
+#masthead-container {
+	a {
+		color: #000;
+	}
+}
+
 #site-navigation {
-	background-color: #d6abad; // TODO
+	background-color: $primary-color; // TODO
 	border-color: #38332a;
 }
 
@@ -7,8 +13,88 @@ body {
 	background-color: #f5f5f2;
 }
 
+#zarya-carousel-dots {
+	.active {
+		background: #000;
+	}
+}
+
+
+
 #site-footer {
 	background-color: #e8e6e0; // TODO: use scss variable
+	a {
+		color: #000;
+	}
 }
+
+#footer-top {
+	.footer-menu {
+		.menu {
+			ul {
+				border-color: #aaa;
+			}
+		}
+	}
+}
+
+
+.woocommerce-breadcrumb {
+	border-color: #ddd;
+}
+
+.woocommerce-pagination {
+	ul {
+		li {
+			border-color: #e0ddd6;
+		}
+	}
+}
+
+.woocommerce-ordering {
+	border-color: #ddd;
+	select {
+		background-color: white;
+		color: blue;
+	}
+}
+
+form.checkout_coupon {
+	border-color: #ddd;
+}
+
+
+body.single-product {
+	div.entry-summary {
+		border-color: #ddd;
+	}
+}
+
+
+table.woocommerce-cart-form__contents {
+	tr.cart_item {
+		border-color: #ddd;
+	}
+
+	div.coupon {
+		border-color: #ddd;
+	}
+
+	div.woocommerce {
+		div.cart-collaterals {
+			div.cart_totals {
+				border-color: #ddd;
+
+			}
+		}
+	}
+}
+
+
+.woocommerce-LoopProduct-link > .onsale {
+	background-color: #fff;
+
+}
+
 
 

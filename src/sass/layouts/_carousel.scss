@@ -6,9 +6,11 @@
 	
 }
 
+
 #zarya-carousel {
 	position: relative;
 }
+
 
 #zarya-carousel-contents {
 
@@ -21,28 +23,26 @@
 	}
 }
 
-.zarya-carousel-slide {
-	position: relative {
 
-	}
+.zarya-carousel-slide {
+	position: relative;
 
 	a {
 		position: absolute;
 		top: 60%;
 		left: 50%;
 		transform: translate(-50%, -50%) scale(2);
-
 	}
-
 }
+
 
 #zarya-carousel-prev {
 	transform: rotate(90deg) scale(2);
 	position: absolute;
 	top: 55%;
 	left: 2%;
-
 }
+
 
 #zarya-carousel-next {
 	transform: rotate(-90deg) scale(2);
@@ -76,9 +76,5 @@
 		border-width: 2px;
 		border-radius: 50%;
 		cursor: pointer;
-	}
-
-	.active {
-		background: black;
 	}
 }
