@@ -8,7 +8,7 @@ table.woocommerce-cart-form__contents {
 
 	tr.cart_item {
 		display: grid;
-		grid-template-columns: 1fr 3fr 2fr;
+		grid-template-columns: 7fr 6fr 2fr;
 		grid-template-areas:
 			"thumbnail price remove"
 			"thumbnail name ."
@@ -23,7 +23,6 @@ table.woocommerce-cart-form__contents {
 
 		td.product-thumbnail {
 			grid-area: thumbnail;
-			min-width: 8rem;
 		}
 
 		td.product-remove {
