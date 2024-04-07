@@ -1,0 +1,38 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.checkout-button,
+.zarya-button,
+div.woocommerce-notices-wrapper a {
+	border: 1px solid;
+	border-color: black; // border-color: $color__border-button; TODO
+	border-radius: 5px;
+	background: white; // background: $color__background-button; TODO
+	color: black; // color: $color__button; TODO
+	line-height: 0.8rem;
+	padding: 0.6em 1em;
+	font-size: 0.6rem;
+	font-weight: bold;
+	letter-spacing: 0.1rem;
+	text-align: center;
+	text-decoration: none;
+
+	text-transform: uppercase;
+	cursor: pointer;
+
+	&:hover {
+		// color: $color__button-hover !important; TODO
+		// border-color: $color__border-button-hover; TODO
+	}
+
+	&:active,
+	&:focus {
+		// border-color: $color__border-button-focus; TODO
+	}
+
+	&:visited {
+		// color: $color__button; TODO
+
+	}
+}
