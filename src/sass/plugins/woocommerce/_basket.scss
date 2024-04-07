@@ -68,12 +68,12 @@ table.woocommerce-cart-form__contents {
 
 	div.coupon {
 		display: flex;
-		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
 		border-bottom: 1px solid;
 		margin: 0;
 		padding: 1rem 0 1.4rem 0;
+		gap: 1rem;
 
 		label {
 			flex-basis: 100%;
@@ -83,13 +83,15 @@ table.woocommerce-cart-form__contents {
 		}
 
 		#coupon_code {
-			flex-basis: 60%;
 			padding: 0.4rem;
+			flex-grow: 1;
 		}
 
 		button[name="apply_coupon"] {
-			flex-basis: 35%;
 			height: 2.2rem;
+			padding-left: 1rem;
+			padding-right: 1rem;
+			text-transform: uppercase;
 		}
 	}
 
@@ -122,6 +124,27 @@ div.cart-collaterals {
 		margin-bottom: 0.2rem;
 	}
 
+	tr.shipping {
+		display: flex;
+		line-height: 1.6rem;
+
+		th {
+			margin-right: 1.5rem;
+		}
+
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+
+			label {
+				padding-left: 0.5rem;
+
+			}
+		}
+		
+
+	}
 }
 
 
@@ -147,10 +170,7 @@ div.woocommerce {
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
-				border: 1px solid;
 				padding: 1rem;
-				height: 10.25rem;
-				box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 				min-width: 18rem;
 
 			}
