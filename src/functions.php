@@ -40,11 +40,12 @@ if ( ! function_exists( 'zarya_setup' ) ) :
 		add_theme_support( 'menus' );
 		register_nav_menus(
 			array(
-				'desktop-menu' => __( 'Desktop', 'zarya' ),
-				'hamburger-menu' => __( 'Hamburger', 'zarya' ),
+				'navigation-menu' => __( 'Navigation', 'zarya' ),
+				'social-menu' => __('Social', 'zarya' ),
 				'footer-left-menu' => __('Left Footer', 'zarya' ),
 				'footer-middle-menu' => __('Middle Footer', 'zarya' ),
 				'footer-right-menu' => __('Right Footer', 'zarya' ),
+				'footer-bottom-menu' => __('Bottom Footer', 'zarya' ),
 			)
 		);
 

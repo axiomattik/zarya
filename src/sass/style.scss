@@ -16,6 +16,7 @@ Text Domain: zarya
 
 @import "layouts/main";
 @import "layouts/header";
+@import "layouts/navigation";
 @import "layouts/hero";
 @import "layouts/carousel";
 @import "layouts/footer";
@@ -23,8 +24,6 @@ Text Domain: zarya
 @import 'elements/buttons';
 
 @import "components/chevron";
-@import "components/hamburger";
-
 
 @import "typography/header";
 
