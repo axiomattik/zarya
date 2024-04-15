@@ -30,6 +30,7 @@
 
 body {
 	background-color: #f5f5f2;
+	
 }
 
 #zarya-carousel-dots {
@@ -175,5 +176,13 @@ ul.products {
 		div.entry-summary {
 			border-color: black;
 		}
+	}
+}
+
+
+div.quantity {
+	border-color: black;
+	&>input.qty {
+		border-color: black;
 	}
 }
