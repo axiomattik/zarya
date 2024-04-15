@@ -34,25 +34,23 @@ ul.products {
 
 	a {
 		text-decoration: none;
-		color: black;
 	}
 
 	a:hover {
 		text-decoration: underline;
-
 	}
 }
 
+
 .related > ul.products {
 	justify-content: start;
-
-
 }
+
 
 .price {
 	font-weight: bold;
-
 }
+
 
 .woocommerce-LoopProduct-link > .onsale {
 	padding: 0.3rem 0;

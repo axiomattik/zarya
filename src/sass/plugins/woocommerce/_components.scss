@@ -216,7 +216,7 @@ div.quantity {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border: solid black 1px;
+	border: 1px solid;
 	border-radius: 0.2rem;
 	width: min-content;
 	margin-bottom: 0.8rem;
@@ -248,8 +248,8 @@ div.quantity {
 
 	&>input.qty {
 		appearance: textfield;
-		border-left: solid black 1px;
-		border-right: solid black 1px;
+		border-left: 1px solid;
+		border-right: 1px solid;
 		border-radius: 0;
 		width: 2.6rem;
 		font-weight: bold;
