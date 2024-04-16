@@ -54,10 +54,8 @@ add_filter( 'woocommerce_return_to_shop_text', 'zarya_return_to_shop_text' );
  */
 do_action( 'woocommerce_cart_is_empty' );
 
-//TODO: /* If not signed in, display message and link to sign in */
-
 if ( ! is_user_logged_in() ) : ?>
-	<p>Missing items from your basket? <a>Sign in</a></p>
+	<p>Missing items from your basket? <a href="<?php echo                                                     get_permalink(get_option('woocommerce_myaccount_page_id')); ?>">Log in</a></p>
 <?php endif; ?>
 	
 
