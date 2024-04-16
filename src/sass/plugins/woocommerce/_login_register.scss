@@ -1,4 +1,5 @@
 #customer_login {
+	margin-top: 1.5rem;
 	.required {
 		display: none;
 	}
@@ -36,4 +37,17 @@
 	}
 
 
+}
+
+
+@media screen and (min-width: 960px) {
+	#customer_login {
+		max-width: 30rem;
+		margin-left: auto;
+		margin-right: auto;
+		border: 1px solid;
+		padding: 1.5rem;
+		box-shadow: 4px 4px 4px 0 rgba(0,0,0,.06);
+
+	}
 }
