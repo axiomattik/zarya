@@ -9,35 +9,28 @@
 	<footer id="site-footer">
 		<div id="footer-top-container">
 			<div id="footer-top">
-
+			
 			<?php 
-			$menus = get_registered_nav_menus();
-			foreach ( $menus as $location => $description ) :
-				if ( ! str_contains( $location, 'footer' ) ) continue; 
-				if ( ! has_nav_menu( $location ) ) continue;
-
-			?>
-
-					<div class="footer-menu-wrapper">
-						<div class="footer-menu">
-							<h3><?php echo wp_get_nav_menu_name( $location ); ?></h3>
-							<div class="chevron"></div>
-
+			foreach ( array('left-footer-menu', 'middle-footer-menu', 'right-footer-menu') as $location): ?> 
+			
+				<div class="footer-menu-wrapper">
+					<div class="footer-menu">
+						<h3><?php echo wp_get_nav_menu_name( $location ); ?></h3>
+						<div class="chevron"></div>
 							<?php
 							wp_nav_menu( array( 
-								'menu' => $location,
-								'depth' => 0,
-								'theme-location' => $location,
+								'theme_location' => $location,
+								'depth' => 1,
 								'container' => 'div',
 								'container_class' => 'menu hidden', /* hidden class affects mobile not desktop */
 								'fallback_cb' => false,
 							));
 							?>
-
-						</div>
 					</div>
-
+				</div>
+				
 			<?php endforeach; ?>
+
 
 			</div><!-- footer-top -->
 		</div><!-- footer-top-container -->

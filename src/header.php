@@ -37,6 +37,7 @@
 				wp_nav_menu(
 					array(
 						'theme_location' => 'navigation-menu',
+						'depth' => '0',
 						'container' => 'ul',
 				)); ?>
 				<div id="hamburger-overlay"></div>

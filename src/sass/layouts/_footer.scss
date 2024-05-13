@@ -68,12 +68,9 @@
 
 @media screen and (min-width: 960px) {
 	#footer-top {
+		justify-content: space-between;
 
 		.footer-menu {
-
-			h3 {
-				text-align: center;
-			}
 
 			.chevron {
 				display: none;
@@ -82,8 +79,7 @@
 			.menu {
 
 				ul {
-					border-right: 1px solid;
-					padding-left: 3rem;
+					padding-left: 0;
 					padding-right: 3rem;
 				}
 			}

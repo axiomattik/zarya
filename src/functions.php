@@ -42,10 +42,10 @@ if ( ! function_exists( 'zarya_setup' ) ) :
 			array(
 				'navigation-menu' => __( 'Navigation', 'zarya' ),
 				'social-menu' => __('Social', 'zarya' ),
-				'footer-left-menu' => __('Left Footer', 'zarya' ),
-				'footer-middle-menu' => __('Middle Footer', 'zarya' ),
-				'footer-right-menu' => __('Right Footer', 'zarya' ),
-				'footer-bottom-menu' => __('Bottom Footer', 'zarya' ),
+				'left-footer-menu' => __('Left Footer', 'zarya' ),
+				'middle-footer-menu' => __('Middle Footer', 'zarya' ),
+				'right-footer-menu' => __('Right Footer', 'zarya' ),
+				'bottom-footer-menu' => __('Bottom Footer', 'zarya' ),
 			)
 		);
 
