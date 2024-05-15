@@ -26,22 +26,14 @@
 
 		<header id="masthead">
 
-			<nav id="navigation-menu">
+			<div>
 				<input id="hamburger-toggle" type="checkbox"></input>
 				<label for="hamburger-toggle" class="hamburger">
 					<span></span>
 					<span></span>
 					<span></span>
 				</label>
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'navigation-menu',
-						'depth' => '0',
-						'container' => 'ul',
-				)); ?>
-				<div id="hamburger-overlay"></div>
-			</nav><!-- #navigation-menu -->
+			</div>
 
 
 			<div id="site-branding">
@@ -71,6 +63,24 @@
 
 		</header><!-- #masthead -->
 
+		<nav id="navigation-menu">
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'navigation-menu',
+					'depth' => '1',
+					'container' => 'ul',
+			)); ?>
+			<div id="hamburger-overlay"></div>
+
+			<?php get_template_part( 'template-parts/navigation-submenus', 'none' ); ?>
+
+		</nav><!-- #navigation-menu -->
+
+
 	</div><!-- #masthead-container -->
 
 	<div id="site-body">
+
+
+

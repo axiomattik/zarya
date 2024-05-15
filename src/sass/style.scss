@@ -16,10 +16,13 @@ Text Domain: zarya
 
 @import "layouts/main";
 @import "layouts/header";
-@import "layouts/navigation";
 @import "layouts/hero";
 @import "layouts/carousel";
 @import "layouts/footer";
+
+@import "navigation/ecommerce";
+@import "navigation/desktop";
+//@import "navigation/footer";
 
 @import "elements/chevron";
 @import 'elements/buttons';
